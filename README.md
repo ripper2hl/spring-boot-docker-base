@@ -1,11 +1,13 @@
 # Spring Boot Docker Base Image
 
-[![](https://img.shields.io/docker/stars/etiennek/spring-boot.svg)](https://hub.docker.com/r/etiennek/spring-boot/ 'Docker hub')
-[![](https://img.shields.io/docker/pulls/etiennek/spring-boot.svg)](https://hub.docker.com/r/etiennek/spring-boot/ 'Docker hub')
+[![](https://img.shields.io/docker/stars/jesusperales/spring-boot.svg)](https://hub.docker.com/r/etiennek/spring-boot/ 'Docker hub')
+[![](https://img.shields.io/docker/pulls/jesusperales/spring-boot.svg)](https://hub.docker.com/r/etiennek/spring-boot/ 'Docker hub')
 
 ## What is this?
 
-A Docker base image, following Docker image
+## It's a fork of the original [spring boot base](https://github.com/EtienneK/spring-boot-docker-base) image with [Amazon Corretto](https://aws.amazon.com/es/corretto/) and Java 11
+
+Docker base image, following Docker image
 [best-practices](http://www.projectatomic.io/docs/docker-image-author-guidance/),
 for Spring Boot applications.
 
@@ -35,7 +37,7 @@ to the actual path of your Spring Boot application jar file):
 
 ```bash
 mkdir bootapp-docker && cd bootapp-docker
-echo "FROM etiennek/spring-boot" > Dockerfile
+echo "FROM jesusperales/spring-boot" > Dockerfile
 cp /path/to/spring/boot/application.jar ./app.jar
 docker build -t bootapp-docker .
 docker run -p 8007:8007 bootapp-docker
