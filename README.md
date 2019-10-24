@@ -64,3 +64,24 @@ docker run -p 8007:8007 \
 ## Example Project
 
 [https://github.com/EtienneK/spring-boot-admin](https://github.com/EtienneK/spring-boot-admin)
+
+## Multi-stage builds
+
+If you use docker mulit-stage builds you need create an `app.jar` file :
+
+```bash
+echo 'workaround for use multi-stage builds' >> app.jar 
+```
+
+And this is a Dockerfile example:
+
+```Dockerfile
+FROM maven:alpine AS build
+ADD pom.xml /usr/src/app/
+ADD src /usr/src/app/src
+RUN mvn -f /usr/src/app/pom.xml clean package -Dmaven.test.skip=true
+
+FROM jesusperales/spring-boot
+COPY --from=build /usr/src/app/target/yourjar.jar /
+EXPOSE 8007
+```
