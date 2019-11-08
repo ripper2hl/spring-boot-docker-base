@@ -82,6 +82,6 @@ ADD src /usr/src/app/src
 RUN mvn -f /usr/src/app/pom.xml clean package -Dmaven.test.skip=true
 
 FROM jesusperales/spring-boot
-COPY --from=build /usr/src/app/target/yourjar.jar /
+COPY --from=build /usr/src/app/target/*.jar /
 EXPOSE 8007
 ```
