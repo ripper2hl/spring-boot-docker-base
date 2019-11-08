@@ -1,7 +1,7 @@
 # Spring Boot Docker Base Image
 
-[![](https://img.shields.io/docker/stars/jesusperales/spring-boot.svg)](https://hub.docker.com/r/etiennek/spring-boot/ 'Docker hub')
-[![](https://img.shields.io/docker/pulls/jesusperales/spring-boot.svg)](https://hub.docker.com/r/etiennek/spring-boot/ 'Docker hub')
+[![](https://img.shields.io/docker/stars/jesusperales/spring-boot.svg)](https://hub.docker.com/r/jesusperales/spring-boot/ 'Docker hub')
+[![](https://img.shields.io/docker/pulls/jesusperales/spring-boot.svg)](https://hub.docker.com/r/jesusperales/spring-boot/ 'Docker hub')
 
 ## What is this?
 
